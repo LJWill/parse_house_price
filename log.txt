@@ -1,0 +1,632 @@
+2018-06-12 01:22:20 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: parse_house_price)
+2018-06-12 01:22:20 [scrapy.utils.log] INFO: Versions: lxml 4.2.1.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.5.0, Python 2.7.15 |Anaconda, Inc.| (default, May  1 2018, 18:37:05) - [GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Darwin-17.6.0-x86_64-i386-64bit
+2018-06-12 01:22:20 [scrapy.crawler] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'parse_house_price.spiders', 'FEED_URI': 'reals.json', 'SPIDER_MODULES': ['parse_house_price.spiders'], 'BOT_NAME': 'parse_house_price', 'FEED_FORMAT': 'json', 'LOG_FILE': 'log.txt'}
+2018-06-12 01:22:20 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-06-12 01:22:20 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'parse_house_price.middlewares.ParseHousePriceDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-06-12 01:22:20 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-06-12 01:22:20 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2018-06-12 01:22:20 [scrapy.core.engine] INFO: Spider opened
+2018-06-12 01:22:20 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-06-12 01:22:20 [reals] INFO: Spider opened: reals
+2018-06-12 01:22:20 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6025
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/state/vic> (referer: None)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/coburg-3058-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/bundoora-3083-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/brunswick-3056-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/clayton-3168-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/clifton%20hill-3068-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/coburg-3058-vic>
+{'UNIT_MEDIAN_PRICE': u'$512,875', 'HOUSE-MEDIAN-PRICE': u'$991,000', 'SUBURB-NAME': u'Coburg'}
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/caroline%20springs-3023-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/caulfield-3162-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/carlton-3053-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/brighton-3186-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/bundoora-3083-vic>
+{'UNIT_MEDIAN_PRICE': u'$438,000', 'HOUSE-MEDIAN-PRICE': u'$751,000', 'SUBURB-NAME': u'Bundoora'}
+2018-06-12 01:22:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/brunswick-3056-vic>
+{'UNIT_MEDIAN_PRICE': u'$494,000', 'HOUSE-MEDIAN-PRICE': u'$1,153,000', 'SUBURB-NAME': u'Brunswick'}
+2018-06-12 01:22:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/clayton-3168-vic>
+{'UNIT_MEDIAN_PRICE': u'$598,000', 'HOUSE-MEDIAN-PRICE': u'$1,231,000', 'SUBURB-NAME': u'Clayton'}
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/box%20hill-3128-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/box%20hill%20north-3129-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/camberwell-3124-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/berwick-3806-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/yarraville-3013-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/clifton%20hill-3068-vic>
+{'UNIT_MEDIAN_PRICE': u'$667,000', 'HOUSE-MEDIAN-PRICE': u'$1,369,000', 'SUBURB-NAME': u'Clifton Hill'}
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/burwood%20east-3151-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/boronia-3155-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/blackburn-3130-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/caroline%20springs-3023-vic>
+{'UNIT_MEDIAN_PRICE': u'$443,000', 'HOUSE-MEDIAN-PRICE': u'$611,000', 'SUBURB-NAME': u'Caroline Springs'}
+2018-06-12 01:22:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/caulfield-3162-vic>
+{'UNIT_MEDIAN_PRICE': u'$667,750', 'HOUSE-MEDIAN-PRICE': u'$1,810,000', 'SUBURB-NAME': u'Caulfield'}
+2018-06-12 01:22:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/carlton-3053-vic>
+{'UNIT_MEDIAN_PRICE': u'$382,495', 'HOUSE-MEDIAN-PRICE': u'$1,435,000', 'SUBURB-NAME': u'Carlton'}
+2018-06-12 01:22:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/brighton-3186-vic>
+{'UNIT_MEDIAN_PRICE': u'$947,000', 'HOUSE-MEDIAN-PRICE': u'$2,392,500', 'SUBURB-NAME': u'Brighton'}
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/williamstown-3016-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/west%20melbourne-3003-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/werribee-3030-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/torquay-3228-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/toorak-3142-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/box%20hill-3128-vic>
+{'UNIT_MEDIAN_PRICE': u'$485,000', 'HOUSE-MEDIAN-PRICE': u'$1,726,000', 'SUBURB-NAME': u'Box Hill'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/box%20hill%20north-3129-vic>
+{'UNIT_MEDIAN_PRICE': u'$877,500', 'HOUSE-MEDIAN-PRICE': u'$1,277,500', 'SUBURB-NAME': u'Box Hill North'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/camberwell-3124-vic>
+{'UNIT_MEDIAN_PRICE': u'$766,000', 'HOUSE-MEDIAN-PRICE': u'$2,200,000', 'SUBURB-NAME': u'Camberwell'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/berwick-3806-vic>
+{'UNIT_MEDIAN_PRICE': u'$515,000', 'HOUSE-MEDIAN-PRICE': u'$700,000', 'SUBURB-NAME': u'Berwick'}
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/thornbury-3071-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/tarneit-3029-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/sunbury-3429-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/yarraville-3013-vic>
+{'UNIT_MEDIAN_PRICE': u'$535,000', 'HOUSE-MEDIAN-PRICE': u'$1,041,000', 'SUBURB-NAME': u'Yarraville'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/burwood%20east-3151-vic>
+{'UNIT_MEDIAN_PRICE': u'$795,000', 'HOUSE-MEDIAN-PRICE': u'$1,104,500', 'SUBURB-NAME': u'Burwood East'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/boronia-3155-vic>
+{'UNIT_MEDIAN_PRICE': u'$572,500', 'HOUSE-MEDIAN-PRICE': u'$765,000', 'SUBURB-NAME': u'Boronia'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/blackburn-3130-vic>
+{'UNIT_MEDIAN_PRICE': u'$750,000', 'HOUSE-MEDIAN-PRICE': u'$1,400,000', 'SUBURB-NAME': u'Blackburn'}
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/st%20kilda-3182-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/southbank-3006-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/south%20yarra-3141-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/south%20melbourne-3205-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/rowville-3178-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/williamstown-3016-vic>
+{'UNIT_MEDIAN_PRICE': u'$568,500', 'HOUSE-MEDIAN-PRICE': u'$1,494,000', 'SUBURB-NAME': u'Williamstown'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/west%20melbourne-3003-vic>
+{'UNIT_MEDIAN_PRICE': u'$518,500', 'HOUSE-MEDIAN-PRICE': u'$1,326,000', 'SUBURB-NAME': u'West Melbourne'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/werribee-3030-vic>
+{'UNIT_MEDIAN_PRICE': u'$360,000', 'HOUSE-MEDIAN-PRICE': u'$495,000', 'SUBURB-NAME': u'Werribee'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/torquay-3228-vic>
+{'UNIT_MEDIAN_PRICE': u'$622,500', 'HOUSE-MEDIAN-PRICE': u'$780,000', 'SUBURB-NAME': u'Torquay'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/toorak-3142-vic>
+{'UNIT_MEDIAN_PRICE': u'$902,000', 'HOUSE-MEDIAN-PRICE': u'$4,160,000', 'SUBURB-NAME': u'Toorak'}
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/ringwood-3134-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/richmond-3121-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/reservoir-3073-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/thornbury-3071-vic>
+{'UNIT_MEDIAN_PRICE': u'$520,000', 'HOUSE-MEDIAN-PRICE': u'$1,171,000', 'SUBURB-NAME': u'Thornbury'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/tarneit-3029-vic>
+{'UNIT_MEDIAN_PRICE': u'$378,500', 'HOUSE-MEDIAN-PRICE': u'$540,000', 'SUBURB-NAME': u'Tarneit'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/sunbury-3429-vic>
+{'UNIT_MEDIAN_PRICE': u'$385,000', 'HOUSE-MEDIAN-PRICE': u'$530,000', 'SUBURB-NAME': u'Sunbury'}
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/preston-3072-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/prahran-3181-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/port%20melbourne-3207-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/point%20cook-3030-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/pakenham-3810-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/st%20kilda-3182-vic>
+{'UNIT_MEDIAN_PRICE': u'$511,250', 'HOUSE-MEDIAN-PRICE': u'$1,237,500', 'SUBURB-NAME': u'St Kilda'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/southbank-3006-vic>
+{'UNIT_MEDIAN_PRICE': u'$553,000', 'HOUSE-MEDIAN-PRICE': u'no data', 'SUBURB-NAME': u'Southbank'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/south%20yarra-3141-vic>
+{'UNIT_MEDIAN_PRICE': u'$572,500', 'HOUSE-MEDIAN-PRICE': u'$1,642,500', 'SUBURB-NAME': u'South Yarra'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/south%20melbourne-3205-vic>
+{'UNIT_MEDIAN_PRICE': u'$590,000', 'HOUSE-MEDIAN-PRICE': u'$1,495,000', 'SUBURB-NAME': u'South Melbourne'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/rowville-3178-vic>
+{'UNIT_MEDIAN_PRICE': u'$520,000', 'HOUSE-MEDIAN-PRICE': u'$884,250', 'SUBURB-NAME': u'Rowville'}
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/northcote-3070-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/north%20melbourne-3051-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/narre%20warren-3805-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/ringwood-3134-vic>
+{'UNIT_MEDIAN_PRICE': u'$560,000', 'HOUSE-MEDIAN-PRICE': u'$900,000', 'SUBURB-NAME': u'Ringwood'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/richmond-3121-vic>
+{'UNIT_MEDIAN_PRICE': u'$549,000', 'HOUSE-MEDIAN-PRICE': u'$1,267,750', 'SUBURB-NAME': u'Richmond'}
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/reservoir-3073-vic>
+{'UNIT_MEDIAN_PRICE': u'$546,000', 'HOUSE-MEDIAN-PRICE': u'$820,000', 'SUBURB-NAME': u'Reservoir'}
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/mulgrave-3170-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/mount%20waverley-3149-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/mount%20martha-3934-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/mount%20eliza-3930-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/mornington-3931-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/preston-3072-vic>
+{'UNIT_MEDIAN_PRICE': u'$550,000', 'HOUSE-MEDIAN-PRICE': u'$1,000,000', 'SUBURB-NAME': u'Preston'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/prahran-3181-vic>
+{'UNIT_MEDIAN_PRICE': u'$562,250', 'HOUSE-MEDIAN-PRICE': u'$1,500,000', 'SUBURB-NAME': u'Prahran'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/port%20melbourne-3207-vic>
+{'UNIT_MEDIAN_PRICE': u'$761,250', 'HOUSE-MEDIAN-PRICE': u'$1,472,500', 'SUBURB-NAME': u'Port Melbourne'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/point%20cook-3030-vic>
+{'UNIT_MEDIAN_PRICE': u'$450,000', 'HOUSE-MEDIAN-PRICE': u'$650,000', 'SUBURB-NAME': u'Point Cook'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/pakenham-3810-vic>
+{'UNIT_MEDIAN_PRICE': u'$375,000', 'HOUSE-MEDIAN-PRICE': u'$510,000', 'SUBURB-NAME': u'Pakenham'}
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/moonee%20ponds-3039-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/mitcham-3132-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/melbourne-3000-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/northcote-3070-vic>
+{'UNIT_MEDIAN_PRICE': u'$590,000', 'HOUSE-MEDIAN-PRICE': u'$1,325,000', 'SUBURB-NAME': u'Northcote'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/north%20melbourne-3051-vic>
+{'UNIT_MEDIAN_PRICE': u'$505,000', 'HOUSE-MEDIAN-PRICE': u'$1,370,000', 'SUBURB-NAME': u'North Melbourne'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/narre%20warren-3805-vic>
+{'UNIT_MEDIAN_PRICE': u'$447,750', 'HOUSE-MEDIAN-PRICE': u'$626,500', 'SUBURB-NAME': u'Narre Warren'}
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/malvern-3144-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/lilydale-3140-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/keysborough-3173-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/kew-3101-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/kew%20east-3102-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/mulgrave-3170-vic>
+{'UNIT_MEDIAN_PRICE': u'$708,900', 'HOUSE-MEDIAN-PRICE': u'$900,500', 'SUBURB-NAME': u'Mulgrave'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/mount%20waverley-3149-vic>
+{'UNIT_MEDIAN_PRICE': u'$870,000', 'HOUSE-MEDIAN-PRICE': u'$1,400,000', 'SUBURB-NAME': u'Mount Waverley'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/mount%20martha-3934-vic>
+{'UNIT_MEDIAN_PRICE': u'$590,000', 'HOUSE-MEDIAN-PRICE': u'$957,500', 'SUBURB-NAME': u'Mount Martha'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/mount%20eliza-3930-vic>
+{'UNIT_MEDIAN_PRICE': u'$530,500', 'HOUSE-MEDIAN-PRICE': u'$1,190,000', 'SUBURB-NAME': u'Mount Eliza'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/mornington-3931-vic>
+{'UNIT_MEDIAN_PRICE': u'$655,000', 'HOUSE-MEDIAN-PRICE': u'$800,000', 'SUBURB-NAME': u'Mornington'}
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/kensington-3031-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/ivanhoe-3079-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/ivanhoe%20east-3079-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/moonee%20ponds-3039-vic>
+{'UNIT_MEDIAN_PRICE': u'$545,000', 'HOUSE-MEDIAN-PRICE': u'$1,302,700', 'SUBURB-NAME': u'Moonee Ponds'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/mitcham-3132-vic>
+{'UNIT_MEDIAN_PRICE': u'$717,500', 'HOUSE-MEDIAN-PRICE': u'$1,067,000', 'SUBURB-NAME': u'Mitcham'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/melbourne-3000-vic>
+{'UNIT_MEDIAN_PRICE': u'$450,000', 'HOUSE-MEDIAN-PRICE': u'no data', 'SUBURB-NAME': u'Melbourne'}
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/hoppers%20crossing-3029-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/heidelberg-3084-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/hawthorn-3122-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/greensborough-3088-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/glen%20waverley-3150-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/malvern-3144-vic>
+{'UNIT_MEDIAN_PRICE': u'$652,500', 'HOUSE-MEDIAN-PRICE': u'$2,700,000', 'SUBURB-NAME': u'Malvern'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/lilydale-3140-vic>
+{'UNIT_MEDIAN_PRICE': u'$550,000', 'HOUSE-MEDIAN-PRICE': u'$731,000', 'SUBURB-NAME': u'Lilydale'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/keysborough-3173-vic>
+{'UNIT_MEDIAN_PRICE': u'$579,000', 'HOUSE-MEDIAN-PRICE': u'$790,000', 'SUBURB-NAME': u'Keysborough'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/kew-3101-vic>
+{'UNIT_MEDIAN_PRICE': u'$705,000', 'HOUSE-MEDIAN-PRICE': u'$2,182,500', 'SUBURB-NAME': u'Kew'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/kew%20east-3102-vic>
+{'UNIT_MEDIAN_PRICE': u'$1,122,500', 'HOUSE-MEDIAN-PRICE': u'$1,855,000', 'SUBURB-NAME': u'Kew East'}
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/glen%20iris-3146-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/frankston-3199-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/footscray-3011-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/kensington-3031-vic>
+{'UNIT_MEDIAN_PRICE': u'$485,000', 'HOUSE-MEDIAN-PRICE': u'$1,030,000', 'SUBURB-NAME': u'Kensington'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/ivanhoe-3079-vic>
+{'UNIT_MEDIAN_PRICE': u'$735,500', 'HOUSE-MEDIAN-PRICE': u'$1,465,000', 'SUBURB-NAME': u'Ivanhoe'}
+2018-06-12 01:22:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/ivanhoe%20east-3079-vic>
+{'UNIT_MEDIAN_PRICE': u'$665,000', 'HOUSE-MEDIAN-PRICE': u'$2,040,000', 'SUBURB-NAME': u'Ivanhoe East'}
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/flemington-3031-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/fitzroy-3065-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/ferntree%20gully-3156-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/essendon-3040-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/epping-3076-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/hoppers%20crossing-3029-vic>
+{'UNIT_MEDIAN_PRICE': u'$378,500', 'HOUSE-MEDIAN-PRICE': u'$545,000', 'SUBURB-NAME': u'Hoppers Crossing'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/heidelberg-3084-vic>
+{'UNIT_MEDIAN_PRICE': u'$595,000', 'HOUSE-MEDIAN-PRICE': u'$1,186,500', 'SUBURB-NAME': u'Heidelberg'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/hawthorn-3122-vic>
+{'UNIT_MEDIAN_PRICE': u'$519,600', 'HOUSE-MEDIAN-PRICE': u'$2,250,000', 'SUBURB-NAME': u'Hawthorn'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/greensborough-3088-vic>
+{'UNIT_MEDIAN_PRICE': u'$610,000', 'HOUSE-MEDIAN-PRICE': u'$840,000', 'SUBURB-NAME': u'Greensborough'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/glen%20waverley-3150-vic>
+{'UNIT_MEDIAN_PRICE': u'$822,500', 'HOUSE-MEDIAN-PRICE': u'$1,337,500', 'SUBURB-NAME': u'Glen Waverley'}
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/elwood-3184-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/eltham-3095-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/east%20melbourne-3002-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/glen%20iris-3146-vic>
+{'UNIT_MEDIAN_PRICE': u'$650,000', 'HOUSE-MEDIAN-PRICE': u'$2,000,000', 'SUBURB-NAME': u'Glen Iris'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/frankston-3199-vic>
+{'UNIT_MEDIAN_PRICE': u'$430,000', 'HOUSE-MEDIAN-PRICE': u'$620,000', 'SUBURB-NAME': u'Frankston'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/footscray-3011-vic>
+{'UNIT_MEDIAN_PRICE': u'$419,750', 'HOUSE-MEDIAN-PRICE': u'$899,500', 'SUBURB-NAME': u'Footscray'}
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/eaglemont-3084-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/doncaster-3108-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/docklands-3008-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/dandenong-3175-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/croydon-3136-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/flemington-3031-vic>
+{'UNIT_MEDIAN_PRICE': u'$435,700', 'HOUSE-MEDIAN-PRICE': u'$1,021,000', 'SUBURB-NAME': u'Flemington'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/fitzroy-3065-vic>
+{'UNIT_MEDIAN_PRICE': u'$720,000', 'HOUSE-MEDIAN-PRICE': u'$1,585,000', 'SUBURB-NAME': u'Fitzroy'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/ferntree%20gully-3156-vic>
+{'UNIT_MEDIAN_PRICE': u'$555,000', 'HOUSE-MEDIAN-PRICE': u'$755,500', 'SUBURB-NAME': u'Ferntree Gully'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/essendon-3040-vic>
+{'UNIT_MEDIAN_PRICE': u'$485,000', 'HOUSE-MEDIAN-PRICE': u'$1,350,000', 'SUBURB-NAME': u'Essendon'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/epping-3076-vic>
+{'UNIT_MEDIAN_PRICE': u'$379,500', 'HOUSE-MEDIAN-PRICE': u'$608,000', 'SUBURB-NAME': u'Epping'}
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/craigieburn-3064-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/collingwood-3066-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/bentleigh-3204-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/elwood-3184-vic>
+{'UNIT_MEDIAN_PRICE': u'$649,000', 'HOUSE-MEDIAN-PRICE': u'$1,810,000', 'SUBURB-NAME': u'Elwood'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/eltham-3095-vic>
+{'UNIT_MEDIAN_PRICE': u'$693,750', 'HOUSE-MEDIAN-PRICE': u'$975,000', 'SUBURB-NAME': u'Eltham'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/east%20melbourne-3002-vic>
+{'UNIT_MEDIAN_PRICE': u'$655,000', 'HOUSE-MEDIAN-PRICE': u'$3,175,000', 'SUBURB-NAME': u'East Melbourne'}
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/balwyn-3103-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/armadale-3143-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/albert%20park-3206-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/abbotsford-3067-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/eaglemont-3084-vic>
+{'UNIT_MEDIAN_PRICE': u'$749,000', 'HOUSE-MEDIAN-PRICE': u'$1,950,000', 'SUBURB-NAME': u'Eaglemont'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/doncaster-3108-vic>
+{'UNIT_MEDIAN_PRICE': u'$565,000', 'HOUSE-MEDIAN-PRICE': u'$1,392,500', 'SUBURB-NAME': u'Doncaster'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/docklands-3008-vic>
+{'UNIT_MEDIAN_PRICE': u'$570,000', 'HOUSE-MEDIAN-PRICE': u'no data', 'SUBURB-NAME': u'Docklands'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/dandenong-3175-vic>
+{'UNIT_MEDIAN_PRICE': u'$365,000', 'HOUSE-MEDIAN-PRICE': u'$619,000', 'SUBURB-NAME': u'Dandenong'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/croydon-3136-vic>
+{'UNIT_MEDIAN_PRICE': u'$585,000', 'HOUSE-MEDIAN-PRICE': u'$790,000', 'SUBURB-NAME': u'Croydon'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/craigieburn-3064-vic>
+{'UNIT_MEDIAN_PRICE': u'$384,000', 'HOUSE-MEDIAN-PRICE': u'$545,000', 'SUBURB-NAME': u'Craigieburn'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/collingwood-3066-vic>
+{'UNIT_MEDIAN_PRICE': u'$517,000', 'HOUSE-MEDIAN-PRICE': u'$1,155,500', 'SUBURB-NAME': u'Collingwood'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/bentleigh-3204-vic>
+{'UNIT_MEDIAN_PRICE': u'$665,000', 'HOUSE-MEDIAN-PRICE': u'$1,488,250', 'SUBURB-NAME': u'Bentleigh'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/balwyn-3103-vic>
+{'UNIT_MEDIAN_PRICE': u'$730,000', 'HOUSE-MEDIAN-PRICE': u'$2,305,000', 'SUBURB-NAME': u'Balwyn'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/armadale-3143-vic>
+{'UNIT_MEDIAN_PRICE': u'$622,500', 'HOUSE-MEDIAN-PRICE': u'$2,000,000', 'SUBURB-NAME': u'Armadale'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/albert%20park-3206-vic>
+{'UNIT_MEDIAN_PRICE': u'no data', 'HOUSE-MEDIAN-PRICE': u'$2,170,000', 'SUBURB-NAME': u'Albert Park'}
+2018-06-12 01:22:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/abbotsford-3067-vic>
+{'UNIT_MEDIAN_PRICE': u'$505,000', 'HOUSE-MEDIAN-PRICE': u'$1,255,000', 'SUBURB-NAME': u'Abbotsford'}
+2018-06-12 01:22:24 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-06-12 01:22:24 [scrapy.extensions.feedexport] INFO: Stored json feed (85 items) in: reals.json
+2018-06-12 01:22:24 [selenium.webdriver.remote.remote_connection] DEBUG: DELETE http://127.0.0.1:53222/session/68028e76fef887061bd1b480636b3cdb/window {"sessionId": "68028e76fef887061bd1b480636b3cdb"}
+2018-06-12 01:22:24 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-06-12 01:22:24 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 32209,
+ 'downloader/request_count': 86,
+ 'downloader/request_method_count/GET': 86,
+ 'downloader/response_bytes': 1214162,
+ 'downloader/response_count': 86,
+ 'downloader/response_status_count/200': 86,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 6, 11, 15, 22, 24, 884121),
+ 'item_scraped_count': 85,
+ 'log_count/DEBUG': 174,
+ 'log_count/INFO': 9,
+ 'memusage/max': 52690944,
+ 'memusage/startup': 52690944,
+ 'request_depth_max': 1,
+ 'response_received_count': 86,
+ 'scheduler/dequeued': 86,
+ 'scheduler/dequeued/memory': 86,
+ 'scheduler/enqueued': 86,
+ 'scheduler/enqueued/memory': 86,
+ 'start_time': datetime.datetime(2018, 6, 11, 15, 22, 20, 955109)}
+2018-06-12 01:22:24 [scrapy.core.engine] INFO: Spider closed (finished)
+2018-06-12 01:23:37 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: parse_house_price)
+2018-06-12 01:23:37 [scrapy.utils.log] INFO: Versions: lxml 4.2.1.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.5.0, Python 2.7.15 |Anaconda, Inc.| (default, May  1 2018, 18:37:05) - [GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Darwin-17.6.0-x86_64-i386-64bit
+2018-06-12 01:23:37 [scrapy.crawler] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'parse_house_price.spiders', 'FEED_URI': 'reals.csv', 'SPIDER_MODULES': ['parse_house_price.spiders'], 'BOT_NAME': 'parse_house_price', 'FEED_FORMAT': 'csv', 'LOG_FILE': 'log.txt'}
+2018-06-12 01:23:37 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-06-12 01:23:37 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'parse_house_price.middlewares.ParseHousePriceDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-06-12 01:23:37 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-06-12 01:23:37 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2018-06-12 01:23:37 [scrapy.core.engine] INFO: Spider opened
+2018-06-12 01:23:37 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-06-12 01:23:37 [reals] INFO: Spider opened: reals
+2018-06-12 01:23:37 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6025
+2018-06-12 01:23:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/state/vic> (referer: None)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/collingwood-3066-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/burwood%20east-3151-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/collingwood-3066-vic>
+{'UNIT_MEDIAN_PRICE': u'$517,000', 'HOUSE-MEDIAN-PRICE': u'$1,155,500', 'SUBURB-NAME': u'Collingwood'}
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/bundoora-3083-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/coburg-3058-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/camberwell-3124-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/clifton%20hill-3068-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/carlton-3053-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/caulfield-3162-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/clayton-3168-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/burwood%20east-3151-vic>
+{'UNIT_MEDIAN_PRICE': u'$795,000', 'HOUSE-MEDIAN-PRICE': u'$1,104,500', 'SUBURB-NAME': u'Burwood East'}
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/brighton-3186-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/brunswick-3056-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/yarraville-3013-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/box%20hill-3128-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/bundoora-3083-vic>
+{'UNIT_MEDIAN_PRICE': u'$438,000', 'HOUSE-MEDIAN-PRICE': u'$751,000', 'SUBURB-NAME': u'Bundoora'}
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/coburg-3058-vic>
+{'UNIT_MEDIAN_PRICE': u'$512,875', 'HOUSE-MEDIAN-PRICE': u'$991,000', 'SUBURB-NAME': u'Coburg'}
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/camberwell-3124-vic>
+{'UNIT_MEDIAN_PRICE': u'$766,000', 'HOUSE-MEDIAN-PRICE': u'$2,200,000', 'SUBURB-NAME': u'Camberwell'}
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/box%20hill%20north-3129-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/williamstown-3016-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/caroline%20springs-3023-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/boronia-3155-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/blackburn-3130-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/clifton%20hill-3068-vic>
+{'UNIT_MEDIAN_PRICE': u'$667,000', 'HOUSE-MEDIAN-PRICE': u'$1,369,000', 'SUBURB-NAME': u'Clifton Hill'}
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/carlton-3053-vic>
+{'UNIT_MEDIAN_PRICE': u'$382,495', 'HOUSE-MEDIAN-PRICE': u'$1,435,000', 'SUBURB-NAME': u'Carlton'}
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/west%20melbourne-3003-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/werribee-3030-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/torquay-3228-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/caulfield-3162-vic>
+{'UNIT_MEDIAN_PRICE': u'$667,750', 'HOUSE-MEDIAN-PRICE': u'$1,810,000', 'SUBURB-NAME': u'Caulfield'}
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/clayton-3168-vic>
+{'UNIT_MEDIAN_PRICE': u'$598,000', 'HOUSE-MEDIAN-PRICE': u'$1,231,000', 'SUBURB-NAME': u'Clayton'}
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/brighton-3186-vic>
+{'UNIT_MEDIAN_PRICE': u'$947,000', 'HOUSE-MEDIAN-PRICE': u'$2,392,500', 'SUBURB-NAME': u'Brighton'}
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/brunswick-3056-vic>
+{'UNIT_MEDIAN_PRICE': u'$494,000', 'HOUSE-MEDIAN-PRICE': u'$1,153,000', 'SUBURB-NAME': u'Brunswick'}
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/yarraville-3013-vic>
+{'UNIT_MEDIAN_PRICE': u'$535,000', 'HOUSE-MEDIAN-PRICE': u'$1,041,000', 'SUBURB-NAME': u'Yarraville'}
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/box%20hill-3128-vic>
+{'UNIT_MEDIAN_PRICE': u'$485,000', 'HOUSE-MEDIAN-PRICE': u'$1,726,000', 'SUBURB-NAME': u'Box Hill'}
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/toorak-3142-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/thornbury-3071-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/tarneit-3029-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/sunbury-3429-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/st%20kilda-3182-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:38 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/box%20hill%20north-3129-vic>
+{'UNIT_MEDIAN_PRICE': u'$877,500', 'HOUSE-MEDIAN-PRICE': u'$1,277,500', 'SUBURB-NAME': u'Box Hill North'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/williamstown-3016-vic>
+{'UNIT_MEDIAN_PRICE': u'$568,500', 'HOUSE-MEDIAN-PRICE': u'$1,494,000', 'SUBURB-NAME': u'Williamstown'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/caroline%20springs-3023-vic>
+{'UNIT_MEDIAN_PRICE': u'$443,000', 'HOUSE-MEDIAN-PRICE': u'$611,000', 'SUBURB-NAME': u'Caroline Springs'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/boronia-3155-vic>
+{'UNIT_MEDIAN_PRICE': u'$572,500', 'HOUSE-MEDIAN-PRICE': u'$765,000', 'SUBURB-NAME': u'Boronia'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/blackburn-3130-vic>
+{'UNIT_MEDIAN_PRICE': u'$750,000', 'HOUSE-MEDIAN-PRICE': u'$1,400,000', 'SUBURB-NAME': u'Blackburn'}
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/southbank-3006-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/south%20yarra-3141-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/south%20melbourne-3205-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/west%20melbourne-3003-vic>
+{'UNIT_MEDIAN_PRICE': u'$518,500', 'HOUSE-MEDIAN-PRICE': u'$1,326,000', 'SUBURB-NAME': u'West Melbourne'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/werribee-3030-vic>
+{'UNIT_MEDIAN_PRICE': u'$360,000', 'HOUSE-MEDIAN-PRICE': u'$495,000', 'SUBURB-NAME': u'Werribee'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/torquay-3228-vic>
+{'UNIT_MEDIAN_PRICE': u'$622,500', 'HOUSE-MEDIAN-PRICE': u'$780,000', 'SUBURB-NAME': u'Torquay'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/toorak-3142-vic>
+{'UNIT_MEDIAN_PRICE': u'$902,000', 'HOUSE-MEDIAN-PRICE': u'$4,160,000', 'SUBURB-NAME': u'Toorak'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/thornbury-3071-vic>
+{'UNIT_MEDIAN_PRICE': u'$520,000', 'HOUSE-MEDIAN-PRICE': u'$1,171,000', 'SUBURB-NAME': u'Thornbury'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/tarneit-3029-vic>
+{'UNIT_MEDIAN_PRICE': u'$378,500', 'HOUSE-MEDIAN-PRICE': u'$540,000', 'SUBURB-NAME': u'Tarneit'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/sunbury-3429-vic>
+{'UNIT_MEDIAN_PRICE': u'$385,000', 'HOUSE-MEDIAN-PRICE': u'$530,000', 'SUBURB-NAME': u'Sunbury'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/st%20kilda-3182-vic>
+{'UNIT_MEDIAN_PRICE': u'$511,250', 'HOUSE-MEDIAN-PRICE': u'$1,237,500', 'SUBURB-NAME': u'St Kilda'}
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/prahran-3181-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/rowville-3178-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/ringwood-3134-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/richmond-3121-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/reservoir-3073-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/preston-3072-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/point%20cook-3030-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/southbank-3006-vic>
+{'UNIT_MEDIAN_PRICE': u'$553,000', 'HOUSE-MEDIAN-PRICE': u'no data', 'SUBURB-NAME': u'Southbank'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/south%20yarra-3141-vic>
+{'UNIT_MEDIAN_PRICE': u'$572,500', 'HOUSE-MEDIAN-PRICE': u'$1,642,500', 'SUBURB-NAME': u'South Yarra'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/south%20melbourne-3205-vic>
+{'UNIT_MEDIAN_PRICE': u'$590,000', 'HOUSE-MEDIAN-PRICE': u'$1,495,000', 'SUBURB-NAME': u'South Melbourne'}
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/port%20melbourne-3207-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/prahran-3181-vic>
+{'UNIT_MEDIAN_PRICE': u'$562,250', 'HOUSE-MEDIAN-PRICE': u'$1,500,000', 'SUBURB-NAME': u'Prahran'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/rowville-3178-vic>
+{'UNIT_MEDIAN_PRICE': u'$520,000', 'HOUSE-MEDIAN-PRICE': u'$884,250', 'SUBURB-NAME': u'Rowville'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/ringwood-3134-vic>
+{'UNIT_MEDIAN_PRICE': u'$560,000', 'HOUSE-MEDIAN-PRICE': u'$900,000', 'SUBURB-NAME': u'Ringwood'}
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/pakenham-3810-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/northcote-3070-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/north%20melbourne-3051-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/mulgrave-3170-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/mount%20martha-3934-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/richmond-3121-vic>
+{'UNIT_MEDIAN_PRICE': u'$549,000', 'HOUSE-MEDIAN-PRICE': u'$1,267,750', 'SUBURB-NAME': u'Richmond'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/reservoir-3073-vic>
+{'UNIT_MEDIAN_PRICE': u'$546,000', 'HOUSE-MEDIAN-PRICE': u'$820,000', 'SUBURB-NAME': u'Reservoir'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/preston-3072-vic>
+{'UNIT_MEDIAN_PRICE': u'$550,000', 'HOUSE-MEDIAN-PRICE': u'$1,000,000', 'SUBURB-NAME': u'Preston'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/point%20cook-3030-vic>
+{'UNIT_MEDIAN_PRICE': u'$450,000', 'HOUSE-MEDIAN-PRICE': u'$650,000', 'SUBURB-NAME': u'Point Cook'}
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/port%20melbourne-3207-vic>
+{'UNIT_MEDIAN_PRICE': u'$761,250', 'HOUSE-MEDIAN-PRICE': u'$1,472,500', 'SUBURB-NAME': u'Port Melbourne'}
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/narre%20warren-3805-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/mount%20waverley-3149-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/pakenham-3810-vic>
+{'UNIT_MEDIAN_PRICE': u'$375,000', 'HOUSE-MEDIAN-PRICE': u'$510,000', 'SUBURB-NAME': u'Pakenham'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/northcote-3070-vic>
+{'UNIT_MEDIAN_PRICE': u'$590,000', 'HOUSE-MEDIAN-PRICE': u'$1,325,000', 'SUBURB-NAME': u'Northcote'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/north%20melbourne-3051-vic>
+{'UNIT_MEDIAN_PRICE': u'$505,000', 'HOUSE-MEDIAN-PRICE': u'$1,370,000', 'SUBURB-NAME': u'North Melbourne'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/mulgrave-3170-vic>
+{'UNIT_MEDIAN_PRICE': u'$708,900', 'HOUSE-MEDIAN-PRICE': u'$900,500', 'SUBURB-NAME': u'Mulgrave'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/mount%20martha-3934-vic>
+{'UNIT_MEDIAN_PRICE': u'$590,000', 'HOUSE-MEDIAN-PRICE': u'$957,500', 'SUBURB-NAME': u'Mount Martha'}
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/mornington-3931-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/mitcham-3132-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/melbourne-3000-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/mount%20eliza-3930-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/malvern-3144-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/moonee%20ponds-3039-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/narre%20warren-3805-vic>
+{'UNIT_MEDIAN_PRICE': u'$447,750', 'HOUSE-MEDIAN-PRICE': u'$626,500', 'SUBURB-NAME': u'Narre Warren'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/mount%20waverley-3149-vic>
+{'UNIT_MEDIAN_PRICE': u'$870,000', 'HOUSE-MEDIAN-PRICE': u'$1,400,000', 'SUBURB-NAME': u'Mount Waverley'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/mornington-3931-vic>
+{'UNIT_MEDIAN_PRICE': u'$655,000', 'HOUSE-MEDIAN-PRICE': u'$800,000', 'SUBURB-NAME': u'Mornington'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/mitcham-3132-vic>
+{'UNIT_MEDIAN_PRICE': u'$717,500', 'HOUSE-MEDIAN-PRICE': u'$1,067,000', 'SUBURB-NAME': u'Mitcham'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/melbourne-3000-vic>
+{'UNIT_MEDIAN_PRICE': u'$450,000', 'HOUSE-MEDIAN-PRICE': u'no data', 'SUBURB-NAME': u'Melbourne'}
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/kew-3101-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/kew%20east-3102-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/lilydale-3140-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/kensington-3031-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/keysborough-3173-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/ivanhoe-3079-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/ivanhoe%20east-3079-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/mount%20eliza-3930-vic>
+{'UNIT_MEDIAN_PRICE': u'$530,500', 'HOUSE-MEDIAN-PRICE': u'$1,190,000', 'SUBURB-NAME': u'Mount Eliza'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/malvern-3144-vic>
+{'UNIT_MEDIAN_PRICE': u'$652,500', 'HOUSE-MEDIAN-PRICE': u'$2,700,000', 'SUBURB-NAME': u'Malvern'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/moonee%20ponds-3039-vic>
+{'UNIT_MEDIAN_PRICE': u'$545,000', 'HOUSE-MEDIAN-PRICE': u'$1,302,700', 'SUBURB-NAME': u'Moonee Ponds'}
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/hoppers%20crossing-3029-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/kew-3101-vic>
+{'UNIT_MEDIAN_PRICE': u'$705,000', 'HOUSE-MEDIAN-PRICE': u'$2,182,500', 'SUBURB-NAME': u'Kew'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/kew%20east-3102-vic>
+{'UNIT_MEDIAN_PRICE': u'$1,122,500', 'HOUSE-MEDIAN-PRICE': u'$1,855,000', 'SUBURB-NAME': u'Kew East'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/lilydale-3140-vic>
+{'UNIT_MEDIAN_PRICE': u'$550,000', 'HOUSE-MEDIAN-PRICE': u'$731,000', 'SUBURB-NAME': u'Lilydale'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/kensington-3031-vic>
+{'UNIT_MEDIAN_PRICE': u'$485,000', 'HOUSE-MEDIAN-PRICE': u'$1,030,000', 'SUBURB-NAME': u'Kensington'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/keysborough-3173-vic>
+{'UNIT_MEDIAN_PRICE': u'$579,000', 'HOUSE-MEDIAN-PRICE': u'$790,000', 'SUBURB-NAME': u'Keysborough'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/ivanhoe-3079-vic>
+{'UNIT_MEDIAN_PRICE': u'$735,500', 'HOUSE-MEDIAN-PRICE': u'$1,465,000', 'SUBURB-NAME': u'Ivanhoe'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/ivanhoe%20east-3079-vic>
+{'UNIT_MEDIAN_PRICE': u'$665,000', 'HOUSE-MEDIAN-PRICE': u'$2,040,000', 'SUBURB-NAME': u'Ivanhoe East'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/hoppers%20crossing-3029-vic>
+{'UNIT_MEDIAN_PRICE': u'$378,500', 'HOUSE-MEDIAN-PRICE': u'$545,000', 'SUBURB-NAME': u'Hoppers Crossing'}
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/heidelberg-3084-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/frankston-3199-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/flemington-3031-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/hawthorn-3122-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/greensborough-3088-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/glen%20waverley-3150-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/glen%20iris-3146-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/footscray-3011-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/heidelberg-3084-vic>
+{'UNIT_MEDIAN_PRICE': u'$595,000', 'HOUSE-MEDIAN-PRICE': u'$1,186,500', 'SUBURB-NAME': u'Heidelberg'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/frankston-3199-vic>
+{'UNIT_MEDIAN_PRICE': u'$430,000', 'HOUSE-MEDIAN-PRICE': u'$620,000', 'SUBURB-NAME': u'Frankston'}
+2018-06-12 01:23:40 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/flemington-3031-vic>
+{'UNIT_MEDIAN_PRICE': u'$435,700', 'HOUSE-MEDIAN-PRICE': u'$1,021,000', 'SUBURB-NAME': u'Flemington'}
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/ferntree%20gully-3156-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/hawthorn-3122-vic>
+{'UNIT_MEDIAN_PRICE': u'$519,600', 'HOUSE-MEDIAN-PRICE': u'$2,250,000', 'SUBURB-NAME': u'Hawthorn'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/greensborough-3088-vic>
+{'UNIT_MEDIAN_PRICE': u'$610,000', 'HOUSE-MEDIAN-PRICE': u'$840,000', 'SUBURB-NAME': u'Greensborough'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/glen%20waverley-3150-vic>
+{'UNIT_MEDIAN_PRICE': u'$822,500', 'HOUSE-MEDIAN-PRICE': u'$1,337,500', 'SUBURB-NAME': u'Glen Waverley'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/glen%20iris-3146-vic>
+{'UNIT_MEDIAN_PRICE': u'$650,000', 'HOUSE-MEDIAN-PRICE': u'$2,000,000', 'SUBURB-NAME': u'Glen Iris'}
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/fitzroy-3065-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/essendon-3040-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/epping-3076-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/elwood-3184-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/eltham-3095-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/east%20melbourne-3002-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/eaglemont-3084-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/footscray-3011-vic>
+{'UNIT_MEDIAN_PRICE': u'$419,750', 'HOUSE-MEDIAN-PRICE': u'$899,500', 'SUBURB-NAME': u'Footscray'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/ferntree%20gully-3156-vic>
+{'UNIT_MEDIAN_PRICE': u'$555,000', 'HOUSE-MEDIAN-PRICE': u'$755,500', 'SUBURB-NAME': u'Ferntree Gully'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/fitzroy-3065-vic>
+{'UNIT_MEDIAN_PRICE': u'$720,000', 'HOUSE-MEDIAN-PRICE': u'$1,585,000', 'SUBURB-NAME': u'Fitzroy'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/essendon-3040-vic>
+{'UNIT_MEDIAN_PRICE': u'$485,000', 'HOUSE-MEDIAN-PRICE': u'$1,350,000', 'SUBURB-NAME': u'Essendon'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/epping-3076-vic>
+{'UNIT_MEDIAN_PRICE': u'$379,500', 'HOUSE-MEDIAN-PRICE': u'$608,000', 'SUBURB-NAME': u'Epping'}
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/doncaster-3108-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/elwood-3184-vic>
+{'UNIT_MEDIAN_PRICE': u'$649,000', 'HOUSE-MEDIAN-PRICE': u'$1,810,000', 'SUBURB-NAME': u'Elwood'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/eltham-3095-vic>
+{'UNIT_MEDIAN_PRICE': u'$693,750', 'HOUSE-MEDIAN-PRICE': u'$975,000', 'SUBURB-NAME': u'Eltham'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/east%20melbourne-3002-vic>
+{'UNIT_MEDIAN_PRICE': u'$655,000', 'HOUSE-MEDIAN-PRICE': u'$3,175,000', 'SUBURB-NAME': u'East Melbourne'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/eaglemont-3084-vic>
+{'UNIT_MEDIAN_PRICE': u'$749,000', 'HOUSE-MEDIAN-PRICE': u'$1,950,000', 'SUBURB-NAME': u'Eaglemont'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/doncaster-3108-vic>
+{'UNIT_MEDIAN_PRICE': u'$565,000', 'HOUSE-MEDIAN-PRICE': u'$1,392,500', 'SUBURB-NAME': u'Doncaster'}
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/docklands-3008-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/dandenong-3175-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/croydon-3136-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/craigieburn-3064-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/berwick-3806-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/bentleigh-3204-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/balwyn-3103-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/docklands-3008-vic>
+{'UNIT_MEDIAN_PRICE': u'$570,000', 'HOUSE-MEDIAN-PRICE': u'no data', 'SUBURB-NAME': u'Docklands'}
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/armadale-3143-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/dandenong-3175-vic>
+{'UNIT_MEDIAN_PRICE': u'$365,000', 'HOUSE-MEDIAN-PRICE': u'$619,000', 'SUBURB-NAME': u'Dandenong'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/croydon-3136-vic>
+{'UNIT_MEDIAN_PRICE': u'$585,000', 'HOUSE-MEDIAN-PRICE': u'$790,000', 'SUBURB-NAME': u'Croydon'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/craigieburn-3064-vic>
+{'UNIT_MEDIAN_PRICE': u'$384,000', 'HOUSE-MEDIAN-PRICE': u'$545,000', 'SUBURB-NAME': u'Craigieburn'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/berwick-3806-vic>
+{'UNIT_MEDIAN_PRICE': u'$515,000', 'HOUSE-MEDIAN-PRICE': u'$700,000', 'SUBURB-NAME': u'Berwick'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/bentleigh-3204-vic>
+{'UNIT_MEDIAN_PRICE': u'$665,000', 'HOUSE-MEDIAN-PRICE': u'$1,488,250', 'SUBURB-NAME': u'Bentleigh'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/balwyn-3103-vic>
+{'UNIT_MEDIAN_PRICE': u'$730,000', 'HOUSE-MEDIAN-PRICE': u'$2,305,000', 'SUBURB-NAME': u'Balwyn'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/armadale-3143-vic>
+{'UNIT_MEDIAN_PRICE': u'$622,500', 'HOUSE-MEDIAN-PRICE': u'$2,000,000', 'SUBURB-NAME': u'Armadale'}
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/albert%20park-3206-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.realestate.com.au/neighbourhoods/abbotsford-3067-vic> (referer: https://www.realestate.com.au/neighbourhoods/state/vic)
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/albert%20park-3206-vic>
+{'UNIT_MEDIAN_PRICE': u'no data', 'HOUSE-MEDIAN-PRICE': u'$2,170,000', 'SUBURB-NAME': u'Albert Park'}
+2018-06-12 01:23:41 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.realestate.com.au/neighbourhoods/abbotsford-3067-vic>
+{'UNIT_MEDIAN_PRICE': u'$505,000', 'HOUSE-MEDIAN-PRICE': u'$1,255,000', 'SUBURB-NAME': u'Abbotsford'}
+2018-06-12 01:23:41 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-06-12 01:23:41 [scrapy.extensions.feedexport] INFO: Stored csv feed (85 items) in: reals.csv
+2018-06-12 01:23:41 [selenium.webdriver.remote.remote_connection] DEBUG: DELETE http://127.0.0.1:53795/session/927b019010c0f1c2c2b9269db58fd27e/window {"sessionId": "927b019010c0f1c2c2b9269db58fd27e"}
+2018-06-12 01:23:42 [selenium.webdriver.remote.remote_connection] DEBUG: Finished Request
+2018-06-12 01:23:42 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 32209,
+ 'downloader/request_count': 86,
+ 'downloader/request_method_count/GET': 86,
+ 'downloader/response_bytes': 1212725,
+ 'downloader/response_count': 86,
+ 'downloader/response_status_count/200': 86,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 6, 11, 15, 23, 41, 977910),
+ 'item_scraped_count': 85,
+ 'log_count/DEBUG': 174,
+ 'log_count/INFO': 9,
+ 'memusage/max': 52858880,
+ 'memusage/startup': 52858880,
+ 'request_depth_max': 1,
+ 'response_received_count': 86,
+ 'scheduler/dequeued': 86,
+ 'scheduler/dequeued/memory': 86,
+ 'scheduler/enqueued': 86,
+ 'scheduler/enqueued/memory': 86,
+ 'start_time': datetime.datetime(2018, 6, 11, 15, 23, 37, 743102)}
+2018-06-12 01:23:42 [scrapy.core.engine] INFO: Spider closed (finished)

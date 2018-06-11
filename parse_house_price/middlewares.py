@@ -12,6 +12,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from scrapy.http import HtmlResponse
 from logging import getLogger
+from spiders.reals_spider import driver, suburbs, urls
+import sys  
+reload(sys)  
+sys.setdefaultencoding('utf8')  
 
 class ParseHousePriceSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -76,6 +80,13 @@ class ParseHousePriceDownloaderMiddleware(object):
     def process_request(self, request, spider):
         # Called for each request that goes through the downloader
         # middleware.
+        # print "hello: " + urls[0]
+        # print request.url
+        # for url in urls:
+        #     driver.get(url)
+        #     driver.find_element_by_css_selector('.units').click()
+        #     print "hello: " + driver.find_elements_by_css_selector('.suburb-name')[0].text
+        #     print "hello: " + driver.find_elements_by_css_selector('.price')[8].text
 
         # Must either:
         # - return None: continue processing this request
@@ -87,7 +98,11 @@ class ParseHousePriceDownloaderMiddleware(object):
 
     def process_response(self, request, response, spider):
         # Called with the response returned from the downloader.
-
+        # print response.css('.suburb-name::text').extract_first()
+        # price = response.css('.price::text').extract()
+        # for p in price:
+        #     if price.index(p) == 8:
+        #         print p
         # Must either;
         # - return a Response object
         # - return a Request object
