@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
-
 # Define here the models for your spider middleware
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-
+from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from scrapy.http import HtmlResponse
+from logging import getLogger
 
 class ParseHousePriceSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
